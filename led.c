@@ -91,8 +91,8 @@ int main(void)
 	//GPIOA->MODER &= ~0x03;
 	//GPIOA->PUPDR  &= ~0x03;
 	
-	GPIOA->MODER &= ( 0 << 2 * GPIO_BUTTON_PIN);
-	GPIOA->PUPDR &= (0 << 2 * GPIO_BUTTON_PIN);
+	GPIOA->MODER |= ( 0 << (2 * GPIO_BUTTON_PIN));
+	GPIOA->PUPDR |= (0 << (2 * GPIO_BUTTON_PIN));
 	
 		//enable clock for RCC
 	RCC->APB2ENR |= 0x00004000;
@@ -106,13 +106,13 @@ int main(void)
 #if 1
 	while(1)
 	{
-		led_turn_on(GPIOD,LED_GREEN);
-		led_turn_on(GPIOD,LED_RED);
+		led_turn_on(GPIOJ,LED_GREEN);
+		led_turn_on(GPIOJ,LED_RED);
 
 		for(i=0;i<500000;i++);
 
-		led_turn_off(GPIOD,LED_GREEN);
-		led_turn_off(GPIOD,LED_RED);
+		led_turn_off(GPIOJ,LED_GREEN);
+		led_turn_off(GPIOJ,LED_RED);
 
 		for(i=0;i<500000;i++);
 
@@ -131,7 +131,7 @@ void EXTI0_IRQHandler(void)
   hal_gpio_clear_interrupt(GPIO_BUTTON_PIN);
 	
 	/* Do youR TASK here */
-	led_toggle(GPIOD,LED_RED);
-	led_toggle(GPIOD,LED_GREEN);
+	led_toggle(GPIOJ,LED_RED);
+	led_toggle(GPIOJ,LED_GREEN);
 }
 

@@ -1016,12 +1016,11 @@ ARM Macro Assembler    Page 16
               00000000 
 Command Line: --debug --xref --diag_suppress=9931 --cpu=Cortex-M7.fp.dp --apcs=
 interwork --depend=.\objects\startup_stm32f769xx.d -o.\objects\startup_stm32f76
-9xx.o -ID:\01_Omar\04_proyectos_para_pruebas\01_Courses\01_UDEMY\01_gpio_hal\RT
-E -IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include -IC:\Keil_v5\ARM\PACK\Kei
-l\STM32F7xx_DFP\2.9.0\Drivers\CMSIS\Device\ST\STM32F7xx\Include --predefine="__
-EVAL SETA 1" --predefine="__UVISION_VERSION SETA 517" --predefine="_RTE_ SETA 1
-" --predefine="STM32F769xx SETA 1" --list=.\listings\startup_stm32f769xx.lst RT
-E\Device\STM32F769NIHx\startup_stm32f769xx.s
+9xx.o -I.\RTE\_Target_1 -IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include -IC
+:\Keil_v5\ARM\PACK\Keil\STM32F7xx_DFP\2.9.0\Drivers\CMSIS\Device\ST\STM32F7xx\I
+nclude --predefine="__EVAL SETA 1" --predefine="__UVISION_VERSION SETA 523" --p
+redefine="_RTE_ SETA 1" --predefine="STM32F769xx SETA 1" --list=.\listings\star
+tup_stm32f769xx.lst RTE\Device\STM32F769NIHx\startup_stm32f769xx.s
 
 
 

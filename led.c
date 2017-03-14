@@ -120,8 +120,6 @@ int main(void)
 
 #endif 
 	
-	while(1);
-	
 }
 
 /**
